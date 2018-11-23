@@ -1,0 +1,4 @@
+# Mount EFI as S:
+V:
+cd v:\windows\system32
+bcdboot v:\windows /s S: /f UEFI

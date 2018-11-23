@@ -1,0 +1,1 @@
+icacls E:\ProgramData\WinLinuxSubsystems /grant "cswl:(OI)(CI)(F)"

@@ -1,0 +1,11 @@
+
+
+diskpart
+create vdisk file=D:\Base\Windows_10_x64_LTSC.vhdx maximum=85999 type=expandable
+attach vdisk
+create partition primary
+format fs=ntfs quick label=Virt_Win10_LTSC 
+assign letter=v
+exit
+
+select vdisk  file=D:\Installs\Windows_10_x64_LTSC.vhdx
