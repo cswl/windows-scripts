@@ -2,4 +2,4 @@ Convert swm to wim
 dism /export-image /sourceimagefile:install.swm /swmfile:install*.swm /sourceindex:10 /destinationimagefile:D:\install.wim /Compress:max /CheckIntegrity
 
 # Apply windows image from install.wim
-Dism /Apply-Image /ImageFile:D:\install.wim /index:1 /ApplyDir:V:\
+Dism /Apply-Image /ImageFile:D:\sources\install.wim /index:2 /ApplyDir:F:\
