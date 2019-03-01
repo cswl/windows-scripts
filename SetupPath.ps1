@@ -1,6 +1,6 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
-$bin_path = "C:\Apps\_Binaries"
+$bin_path = "F:\SavedData\Scoop\shims"
 $dll_path = "C:\Apps\_Libraries"
 
 $registryPath = "HKCU:Environment"
