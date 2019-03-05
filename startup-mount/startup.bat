@@ -1,0 +1,1 @@
+schtasks.exe /Create /XML "Startup Mount VHDs.xml" /tn "Startup Mount VHDs"
