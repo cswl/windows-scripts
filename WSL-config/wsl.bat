@@ -1,1 +1,1 @@
-icacls E:\ProgramData\WinLinuxSubsystems /grant "cswl:(OI)(CI)(F)"
+icacls H:/ /grant "Agent47:(OI)(CI)(F)"

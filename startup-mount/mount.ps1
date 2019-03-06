@@ -1,7 +1,7 @@
 
-. ".\Mount-VHDFolder.ps1" 
+. "$PSScriptRoot\Mount-VHDFolder.ps1" 
 
-Import-Csv '.\config.csv' |`
+Import-Csv "$PSScriptRoot\config.csv" |`
     ForEach-Object {
         $image = $_.Image
         $target = $_.Target
