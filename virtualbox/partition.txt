@@ -1,0 +1,9 @@
+
+
+ Get-Partition -DiskNumber 0
+
+ F:\SavedData\VirutalBox\Partitions\arch_sys_rescue.vmdk
+
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\arch_sys_rescue.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions 7,8,9,10
+
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\linux_btrfs.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions 7,8,9

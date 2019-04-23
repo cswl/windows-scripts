@@ -1,0 +1,5 @@
+https://hatsoffsecurity.com/2015/05/31/force-enabling-readyboost-windows-78/comment-page-1/
+
+After a lot of annoying pages I decided to take matters into my own hands! Within the SYSTEM hive (under CurrentControlSet) is the Services key and under there is “Rdyboost”, this contains all of the parameters that ReadyBoost uses to decide on if your USB Stick is up to the challenge.
+
+Under the “Attachstate” subkey there will be a number of settings, on this VM there are 2x USB devices and 1x HDD, on my live system it is not so easy, there are several HDD all with ambiguous names (found the right one with trial and error). This value will be DWORD=2 to produce the above error, simply set it to DWORD=0 to allow ReadyBoost to come back to life.

@@ -1,0 +1,38 @@
+Docker Toolbox
+Docker Toolbox expects that your data volumes will be within C:\Users. This is because Docker has limited access to the filesystem on the host computer.
+
+If you need your project directories to be located elsewhere, for example on your D:\ drive, you will need to take some extra steps to achieve this.
+
+Note: In the steps below, we use some example names, that you should substitute for ones appropriate to your needs. They are:
+
+shared folder/workspace directory: D:\Projects\Divio
+ shared folder name in VIrtualBox: Divio 
+mount point in the Docker Machine: /homedocker/projects 
+Mount an arbitrary host directory in a Docker container
+Stop Docker Machine if it's running, with docker-machine stop.
+In VirtualBox, add a Shared Folder: Settings > Shared Folders > Add share - this will be the directory where you want to locate your project, such as D:\Projects\Divio. Give it an appropriate Folder Name, such as Divio.
+Restart Docker Machine, with docker-machine start.
+SSH into the Docker Machine, with docker-machine ssh.
+Create a directory in the machine as a mount point for the project directories, for example: mkdir projects. This will be /home/docker/projects - you can verify it by running pwd.
+Mount the Shared Folder you named above (Divio) at the mount point you have created: sudo mount -t vboxsf -o uid=1000,gid=50 Divio /home/docker/projects 
+Your Docker Machine will now be able to access the files in D:\Projects\Divio  (shared in VirtualBox under the name Divio) as /home/docker/projects.
+
+Enabling permanent access
+This arrangement will only persist while the Docker Machine is still running - if you restart it, the shared directory will no longer be mounted.
+
+You can set up permanent mounting by editing the Boot2Docker configuration.
+
+Edit /mnt/sda1/var/lib/boot2docker/profile (you may need to use sudo  when opening the file) and add the commands:
+
+mkdir /home/docker/projects
+sudo mount -t vboxsf -o uid=1000,gid=50 Divio /home/docker/projects
+Test it by stopping and restarting the Docker Machine. Once you're back in the Docker Machine, if you run ls projects, you will see the files in D:\Projects\Divio.
+
+Did this answer your question?
+
+
+If you are using Docker Machine on Mac or Windows, your Docker daemon has only limited access to your OS X or Windows filesystem. Docker Machine tries to auto-share your /Users (OS X) or C:\Users (Windows) directory.
+
+Basically, you will need to move your site files to somewhere such as c:\Users\sites and then mount using something like suggested in documentation:
+
+docker run --name=php5.6_container --rm -v "/c/Users/sites:/var/www/html" -p 80:80 -p 8080:8080 php5.6

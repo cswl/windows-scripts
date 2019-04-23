@@ -1,0 +1,17 @@
+{
+    "terminal.integrated.shell.windows": "C:\\windows\\system32\\wsl.exe",
+    "shellLauncher.shells.windows": [
+        {
+            "shell": "C:\\windows\\system32\\cmd.exe",
+            "label": "cmd"
+        },
+        {
+            "shell": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "label": "PowerShell"
+        },
+        {
+            "shell": "C:\\windows\\system32\\wsl.exe",
+            "label": "WSLinux"
+        }
+    ]
+}
