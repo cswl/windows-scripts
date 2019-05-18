@@ -1,5 +1,0 @@
-[URL]
-https://downloadcenter.intel.com/download/28566/Intel-Graphics-Driver-for-Windows-10?product=80939
-
-[Version]
-25.20.100.6577

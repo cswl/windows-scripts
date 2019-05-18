@@ -4,6 +4,6 @@
 
  F:\SavedData\VirutalBox\Partitions\arch_sys_rescue.vmdk
 
-"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\arch_sys_rescue.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions 7,8,9,10
+VBoxManage.exe  internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\arch_sys_rescue.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions  8,9,10,11
 
-"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\linux_btrfs.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions 7,8,9
+ VBoxManage.exe  internalcommands createrawvmdk -filename "F:\SavedData\VirutalBox\Partitions\linux_btrfs.vmdk" -rawdisk \\.\PhysicalDrive0 -partitions 8,9,10
